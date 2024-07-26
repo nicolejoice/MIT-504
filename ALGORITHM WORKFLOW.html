@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<head>
+	<!-- templatemo 419 black white -->
+    <!-- 
+    Black White
+    http://www.templatemo.com/preview/templatemo_419_black_white
+    -->
+	<title>K-MEANS CLUSTERING</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="css/templatemo_style.css" rel="stylesheet" type="text/css">	
+</head>
+<body>
+	<div class="templatemo-logo visible-xs-block">
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 black-bg logo-left-container">
+			<h1 class="logo-left">TECHNOLOGY</h1>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 white-bg logo-right-container">
+			<h1 class="logo-right">PROJECT MANAGEMENT</h1>
+		</div>			
+	</div>
+	<div class="templatemo-container">
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 black-bg left-container">
+			<h1 class="logo-left hidden-xs margin-bottom-60">TECHNOLOGY</h1>			
+			<div class="tm-left-inner-container">
+				<ul class="nav nav-stacked templatemo-nav">
+				  <li><a href="index.html" </i>INTRODUCTION</a></li>
+ <li><a href="BASIC CONCEPT.html"</i>BASIC CONCEPT</a></li>
+				  <li><a href="ALGORITHM WORKFLOW.html"class="active"></i>ALGORITHM WORKFLOW</a></li>
+				  <li><a href="MATHEMATICAL FORMULATION.html"></i>MATHEMATICAL FORMULATION</a></li>
+				  <li><a href="CHOOSING THE NUMBER OF CLUSTERS (K).html"></i>CHOOSING THE NUMBER OF CLUSTERS (K)</a></li>
+				  <li><a href="STRENGTH AND WEAKNESSES.html"></i>STRENGTH AND WEAKNESSES</a></li>
+  <li><a href="EXAMPLE APPLICATION.html"></i>EXAMPLE APPLICATION</a></li>
+ <li><a href="K-MEANS IN TECHNOLOGY PROJECT MANAGEMENT.html"></i>K-MEANS IN TECHNOLOGY PROJECT MANAGEMENT</a></li>
+ <li><a href="IMPLEMENTATION PROCESS.html"></i>IMPLEMENTATION PROCESS</a></li>
+<li><a href="TOOLS AND TECHNOLOGY.html"</i>TOOLS AND TECHNOLOGY</a></li>
+ <li><a href="COMPARISON WITH OTHER CLUSTERING.html"></i>COMPARISON WITH OTHER CLUSTERING</a></li>
+ <li><a href="CONCLUSION.html"></i>CONCLUSION</a></li>
+ <li><a href="REFERENCES.html"></i>REFERENCES</a></li>
+
+
+			</div>
+		</div> <!-- left section -->
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 white-bg right-container">
+			<h1 class="logo-right hidden-xs margin-bottom-60">PROJECT MANAGEMENT</h1>		
+			<div class="tm-right-inner-container">
+				<h1 class="templatemo-header">K-MEANS CLUSTERING ALGORITHM WORKFLOW</h1>
+					<h2>Detailed Steps of the K-Means Algorithm </h2>
+<article>
+					<p>Step 1: Initialization (Choosing Initial Centroids) - The algorithm starts by randomly selecting K initial centroids from the dataset. These centroids serve as the initial reference points for forming clusters. Proper initialization can significantly influence the quality of the final clusters and the speed of convergence. 
+	<br><br>					
+<img src="images/Step1.jpg" alt="Step1" class="img-thumbnail">	
+<br><br>
+Step 2: Assignment (Assigning Data Points to the Nearest Centroid) - Each data point in the dataset is assigned to the nearest centroid based on a chosen distance metric, typically the Euclidean distance. This step partitions the dataset into K clusters, where each data point belongs to the cluster with the closest centroid.
+	<br><br>					
+<img src="images/Step2.jpg" alt="Step2" class="img-thumbnail">	
+<br><br>
+Step 3: Update (Recalculating Centroids) - Once all data points are assigned to clusters, the centroids are recalculated. The new centroid of each cluster is the mean of all data points within that cluster. This step adjusts the centroids to better represent the data points in their respective 
+	<br><br>					
+<img src="images/Step3.jpg" alt="Step3" class="img-thumbnail">
+<br><br>
+Step 4: Repeat Until Convergence - Steps 2 and 3 are repeated iteratively until the centroids no longer change significantly between iterations, indicating convergence. Alternatively, a predefined number of iterations can be set as the stopping criterion. Convergence ensures that the clusters are stable and optimally partitioned. 
+	<br><br>					
+<img src="images/Step4.jpg" alt="Step4" class="img-thumbnail">	
+</p>
+
+<p>Example 1: Consider a simple example with a small dataset and K=3: 
+	<br><br>
+1. Initialization - Select 3 initial centroids randomly from the dataset: 
+<br><br>- Centroid 1: (1, 2) 
+<br><br>- Centroid 2: (5, 8)
+<br><br>- Centroid 3: (9, 4)
+<br><br>2. Assignment (First Iteration) - Calculate the distance of each data point to the centroids and assign them to the nearest centroid: 
+<br><br>- Data point (2, 3) -> nearest to Centroid 1 
+<br><br>- Data point (6, 7) -> nearest to Centroid 2 
+<br><br>- Data point (8, 5) -> nearest to Centroid 3
+<br><br>3. Update - Recalculate the centroids based on the assigned data points: 
+<br><br>- New Centroid 1: Mean of points in cluster 1 (e.g., (2, 3), (1, 2)) 
+<br><br>- New Centroid 2: Mean of points in cluster 2 (e.g., (6, 7), (5, 8)) 
+<br><br>- New Centroid 3: Mean of points in cluster 3 (e.g., (8, 5), (9, 4)) 
+<br><br>4. Subsequent Iterations- Repeat the assignment and update steps. In each iteration, data points may change their cluster assignment, and centroids will be recalculated: 
+<br><br>- Data point (3, 3) might move from cluster 1 to cluster 2 if Centroid 2 becomes closer. 
+<br><br>
+5. Convergence - The algorithm continues until the centroids stabilize and no longer change significantly: 
+<br><br>- Final Centroids: 
+<br><br>- Centroid 1: (1.5, 2.5) 
+<br><br>- Centroid 2: (5.5, 7.5) 
+<br><br>- Centroid 3: (8.5, 4.5)
+
+<br><br>Example 2: Let’s select K=3.
+<br><br>1. Initialization (Choosing Initial Centroids):
+<br><br>We select random data points and define them as centroids for each cluster. We will initialize 3 centroids in the dataset:
+<br><br><img src="images/Step1.1.jpg" alt="Step1.1" class="img-thumbnail">	
+<br><br>2. Assignment (Assigning Data Points to the Nearest Centroid)
+<br><br>Now that centroids are initialized, the next step is to assign data points Xn to their closest cluster centroid Ck
+<br><br><img src="images/Step2.1.jpg" alt="Step2.1" class="img-thumbnail">	
+
+<br><br>In this step, we will first calculate the distance between data point X and centroid C using Euclidean Distance metric. 
+<br><br><img src="images/formula.jpg" alt="formula" class="img-thumbnail">
+<br><br>Then choose the cluster for data points where the distance between the data point and the centroid is minimum. 
+<br><br><img src="images/Step3.1.jpg" alt="Step3.1" class="img-thumbnail">	
+<br><br>3. Update (Recalculating Centroids) 
+<br><br>Next, we will re-initialize the centroids by calculating the average of all data points of that cluster.	
+<br><br><img src="images/Step4.1.jpg" alt="Step4.1" class="img-thumbnail">
+<br><br>4. Repeat Until Convergence
+<br><br>We will keep repeating steps 3 and 4 until we have optimal centroids and the assignments of data points to correct clusters are not changing anymore.	
+<br><br><img src="images/Step5.1.jpg" alt="Step5.1" class="img-thumbnail">	
+<br><br>This iterative process ensures that the data points are grouped into clusters with minimal within-cluster variance and optimal separation between clusters.				
+
+</p>
+				</article>
+				<footer>
+					<p class="col-lg-6 col-md-6 col-sm-12 col-xs-12 templatemo-copyright">Copyright &copy; 2024 Nicole Joice Kamatoy <!-- Credit: www.templatemo.com --></p>
+					<p class="col-lg-6 col-md-6 col-sm-12 col-xs-12 templatemo-social">
+					</p>
+				</footer>
+			</div>	
+		</div> <!-- right section -->
+	</div>	
+</body>
+</html>
