@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<head>
+	<!-- templatemo 419 black white -->
+    <!-- 
+    Black White
+    http://www.templatemo.com/preview/templatemo_419_black_white
+    -->
+	<title>K-MEANS CLUSTERING</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="css/templatemo_style.css" rel="stylesheet" type="text/css">	
+</head>
+<body>
+	<div class="templatemo-logo visible-xs-block">
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 black-bg logo-left-container">
+			<h1 class="logo-left">TECHNOLOGY</h1>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 white-bg logo-right-container">
+			<h1 class="logo-right">PROJECT MANAGEMENT</h1>
+		</div>			
+	</div>
+	<div class="templatemo-container">
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 black-bg left-container">
+			<h1 class="logo-left hidden-xs margin-bottom-60">TECHNOLOGY</h1>			
+			<div class="tm-left-inner-container">
+				<ul class="nav nav-stacked templatemo-nav">
+				  <li><a href="index.html"</i>INTRODUCTION</a></li>
+ <li><a href="BASIC CONCEPT.html"></i>BASIC CONCEPT</a></li>
+				  <li><a href="ALGORITHM WORKFLOW.html"></i>ALGORITHM WORKFLOW</a></li>
+				  <li><a href="MATHEMATICAL FORMULATION.html"></i>MATHEMATICAL FORMULATION</a></li>
+				  <li><a href="CHOOSING THE NUMBER OF CLUSTERS (K).html"></i>CHOOSING THE NUMBER OF CLUSTERS (K)</a></li>
+				  <li><a href="STRENGTH AND WEAKNESSES.html"></i>STRENGTH AND WEAKNESSES</a></li>
+  <li><a href="EXAMPLE APPLICATION.html"></i>EXAMPLE APPLICATION</a></li>
+ <li><a href="K-MEANS IN TECHNOLOGY PROJECT MANAGEMENT.html"></i>K-MEANS IN TECHNOLOGY PROJECT MANAGEMENT</a></li>
+ <li><a href="IMPLEMENTATION PROCESS.html"></i>IMPLEMENTATION PROCESS</a></li>
+<li><a href="TOOLS AND TECHNOLOGY.html" class="active"></i>TOOLS AND TECHNOLOGY</a></li>
+ <li><a href="COMPARISON WITH OTHER CLUSTERING.html"></i>COMPARISON WITH OTHER CLUSTERING</a></li>
+ <li><a href="CONCLUSION.html"></i>CONCLUSION</a></li>
+ <li><a href="REFERENCES.html"></i>REFERENCES</a></li>
+
+
+			</div>
+		</div> <!-- left section -->
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 white-bg right-container">
+			<h1 class="logo-right hidden-xs margin-bottom-60">PROJECT MANAGEMENT</h1>		
+			<div class="tm-right-inner-container">
+				<h1 class="templatemo-header">K-MEANS CLUSTERING<br>TOOLS AND TECHNOLOGIES</h1>
+				<article>
+
+					<p>Scikit-learn is an open-source Python library that implements a range of machine learning, pre-processing, cross-validation, and visualization algorithms using a unified interface. It is an open-source machine-learning library that provides a plethora of tools for various machine-learning tasks such as Classification, Regression, Clustering, and many more.
+<br><br>
+Scikit-learn requires:  
+<br>
+•	NumPy
+<br>
+•	SciPy as its dependencies
+
+					</p>		
+				</article>
+				<article>
+					<h2>Step 1: Load a Dataset</h2>
+					<p>A dataset is nothing but a collection of data. A dataset generally has two main components: 
+<br><br>
+•	Features: (also known as predictors, inputs, or attributes) they are simply the variables of our data. They can be more than one and hence represented by a feature matrix (‘X’ is a common notation to represent feature matrix). A list of all the feature names is termed feature names.
+<br><br>
+•	Response: (also known as the target, label, or output) This is the output variable depending on the feature variables. We generally have a single response column and it is represented by a response vector (‘y’ is a common notation to represent response vector). All the possible values taken by a response vector are termed target names.
+<br><br>
+•	Loading exemplar dataset: scikit-learn comes loaded with a few example datasets like the iris and digits datasets for classification and the boston house prices dataset for regression. 
+<br><br>
+Given below is an example of how one can load an exemplar dataset:
+
+<br><br>Code
+<br><br><img src="images/dataset12.jpg" alt="dataset12" class="img-thumbnail">
+<br><br>Result
+<br><br><img src="images/result13.jpg" alt="result13" class="img-thumbnail">
+<br><br>
+
+Loading external dataset: Now, consider the case when we want to load an external dataset. For this purpose, we can use the pandas library for easily loading and manipulating datasets. 
+<br><br>
+In pandas, important data types are:
+<br><br>
+•	Series: Series is a one-dimensional labeled array capable of holding any data type.
+<br><br>
+•	DataFramet: is a 2-dimensional labeled data structure with columns of potentially different types.You can think of it like a spreadsheet or SQL table, or a dict of Series objects. It is generally the most commonly used pandas object.
+<br><br>Code
+<br><br><img src="images/dataset13.jpg" alt="dataset13" class="img-thumbnail">
+<br><br>Result
+<br><br><img src="images/result14.jpg" alt="result14" class="img-thumbnail">
+<br><br>
+
+</p>		
+				</article>
+				<article>
+<h2>Step 2: Splitting the Dataset</h2>
+					<p>One important aspect of all machine learning models is to determine their accuracy. Now, to determine their accuracy, one can train the model using the given dataset and then predict the response values for the same dataset using that model and hence, find the accuracy of the model. 
+But this method has several flaws in it, like: 
+<br><br>
+•	The goal is to estimate the likely performance of a model on out-of-sample data.
+<br><br>
+•	Maximizing training accuracy rewards overly complex models that won’t necessarily generalize our model.
+<br><br>
+•	Unnecessarily complex models may over-fit the training data.
+<br><br>
+A better option is to split our data into two parts: the first one for training our machine learning model, and the second one for testing our model. 
+<br><br>
+To summarize:
+<br><br>
+•	Split the dataset into two pieces: a training set and a testing set.
+<br><br>
+•	Train the model on the training set.
+<br><br>
+•	Test the model on the testing set and evaluate how well our model did.
+<br><br>
+Advantages of train/test split
+<br><br>
+•	The model can be trained and tested on different data than the one used for training.
+<br><br>
+•	Response values are known for the test dataset; hence predictions can be evaluated.
+<br><br>
+•	Testing accuracy is a better estimate than training accuracy of out-of-sample performance.
+<br><br>Code
+<br><br><img src="images/dataset14.jpg" alt="dataset14" class="img-thumbnail">
+<br><br>Result
+<br><br><img src="images/result15.jpg" alt="result15" class="img-thumbnail">
+<br><br>
+The train_test_split function takes several arguments which are explained below:  
+<br><br>
+•	X, y: These are the feature matrix and response vector which need to be split.
+<br><br>
+•	Test_size: It is the ratio of test data to the given data. For example, setting test_size = 0.4 for 150 rows of X produces test data of 150 x 0.4 = 60 rows.
+<br><br>
+•	Random_state: If you use random_state = some_number, then you can guarantee that your split will be always the same. This is useful if you want reproducible results, for example in testing for consistency in the documentation (so that everybody can see the same numbers).
+<br><br>
+<h2>Step 3: Training the Model</h2>
+					<p>Now, it’s time to train some prediction models using our dataset. Scikit-learn provides a wide range of machine learning algorithms that have a unified/consistent interface for fitting, predicting accuracy, etc.
+<br><br>
+The example given below uses KNN (K nearest neighbors) classifier.
+<br><br>
+Note: We will not go into the details of how the algorithm works as we are interested in understanding its implementation only. 
+<br><br>
+Now, consider the example below:
+<br><br>Code
+<br><br><img src="images/dataset15.jpg" alt="dataset15" class="img-thumbnail">
+<br><br>Result
+<br><br><img src="images/result16.jpg" alt="result16" class="img-thumbnail">
+<br><br>
+Features of Scikit-learn
+<br><br>
+•	Simple and efficient tools for data mining and data analysis. It features various classification, regression, and clustering algorithms including support vector machines, random forests, gradient boosting, k-means, etc.
+<br><br>
+•	Accessible to everybody and reusable in various contexts.
+<br><br>
+•	Built on the top of NumPy, SciPy, and matplotlib.
+<br><br>
+•	Open source, commercially usable – BSD license.
+<br><br><br>
+Benefits of using Scikit-learn Libraries
+<br><br>
+•	Consistent interface to machine learning models
+<br><br>
+•	Provides many tuning parameters but with sensible defaults.
+<br><br>
+•	Exceptional documentation
+				</article>
+				<footer>
+					<p class="col-lg-6 col-md-6 col-sm-12 col-xs-12 templatemo-copyright">Copyright &copy; 2024 Nicole Joice Kamatoy <!-- Credit: www.templatemo.com --></p>
+					<p class="col-lg-6 col-md-6 col-sm-12 col-xs-12 templatemo-social">
+					</p>
+				</footer>
+			</div>	
+		</div> <!-- right section -->
+	</div>	
+</body>
+</html>
