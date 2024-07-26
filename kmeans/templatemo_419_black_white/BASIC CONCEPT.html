@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+	<!-- templatemo 419 black white -->
+    <!-- 
+    Black White
+    http://www.templatemo.com/preview/templatemo_419_black_white
+    -->
+	<title>K-MEANS CLUSTERING</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="css/templatemo_style.css" rel="stylesheet" type="text/css">	
+</head>
+<body>
+	<div class="templatemo-logo visible-xs-block">
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 black-bg logo-left-container">
+			<h1 class="logo-left">TECHNOLOGY</h1>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 white-bg logo-right-container">
+			<h1 class="logo-right">PROJECT MANAGEMENT</h1>
+		</div>			
+	</div>
+	<div class="templatemo-container">
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 black-bg left-container">
+			<h1 class="logo-left hidden-xs margin-bottom-60">TECHNOLOGY</h1>			
+			<div class="tm-left-inner-container">
+				<ul class="nav nav-stacked templatemo-nav">
+				  <li><a href="INTRODUCTION.html" </i>INTRODUCTION</a></li>
+ <li><a href="BASIC CONCEPT.html"class="active"></i>BASIC CONCEPT</a></li>
+				  <li><a href="ALGORITHM WORKFLOW.html"></i>ALGORITHM WORKFLOW</a></li>
+				  <li><a href="MATHEMATICAL FORMULATION.html"></i>MATHEMATICAL FORMULATION</a></li>
+				  <li><a href="CHOOSING THE NUMBER OF CLUSTERS (K).html"></i>CHOOSING THE NUMBER OF CLUSTERS (K)</a></li>
+				  <li><a href="STRENGTH AND WEAKNESSES.html"></i>STRENGTH AND WEAKNESSES</a></li>
+  <li><a href="EXAMPLE APPLICATION.html"></i>EXAMPLE APPLICATION</a></li>
+ <li><a href="K-MEANS IN TECHNOLOGY PROJECT MANAGEMENT.html"></i>K-MEANS IN TECHNOLOGY PROJECT MANAGEMENT</a></li>
+ <li><a href="IMPLEMENTATION PROCESS.html"></i>IMPLEMENTATION PROCESS</a></li>
+<li><a href="TOOLS AND TECHNOLOGY.html"</i>TOOLS AND TECHNOLOGY</a></li>
+ <li><a href="COMPARISON WITH OTHER CLUSTERING.html"></i>COMPARISON WITH OTHER CLUSTERING</a></li>
+ <li><a href="CONCLUSION.html"></i>CONCLUSION</a></li>
+ <li><a href="REFERENCES.html"></i>REFERENCES</a></li>
+
+
+			</div>
+		</div> <!-- left section -->
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 white-bg right-container">
+			<h1 class="logo-right hidden-xs margin-bottom-60">PROJECT MANAGEMENT</h1>		
+			<div class="tm-right-inner-container">
+				<h1 class="templatemo-header">K-MEANS CLUSTERING BASIC CONCEPTS</h1>
+
+					<h2>Definition of Clusters and Centroids</h2>
+<article>
+					<p>K means clustering, assigns data points to one of the K clusters depending on their distance from the center of the clusters. It starts by randomly assigning the clusters centroid in space. Then each data point is assigned to one of the clusters based on its distance from centroid of the cluster. After assigning each point to one of the cluster, new cluster centroids are assigned. This process runs iteratively until it finds a good cluster. In the analysis we assume that the number of cluster is given in advanced and we have to put points in one of the group.
+<br><br>All the objects in the same group called cluster and should be more similar to each other than to those in other clusters. Data points from different clusters should be as different as possible. Clustering allows you to find and organize data into groups that have been formed organically, rather than defining groups before looking at the data.
+	<br><br>					
+<img src="images/cluster.jpg" alt="Cluster" class="img-thumbnail">
+
+<br><br>Each cluster is represented by its center called a “centroid”, which corresponds to the arithmetic mean of data points assigned to the cluster. A centroid is a data point that represents the center of the cluster (the mean), and it might not necessarily be a member of the dataset. This way, the algorithm works through an iterative process until each data point is closer to its own cluster’s centroid than to other clusters’ centroids, minimizing intra-cluster distance at each step.
+</p>
+					<h2>Objective of K-means clustering</h2>
+					<p>The primary objective of k-means clustering is to partition your data into K clusters in such a way that the within-cluster variance is minimized. This means that the data points within each clusters are as close to each other as possible, while the distance between different clusters is maximized. Mathematically, this is achieved by minimizing the sum of squared distances between data points and their respective cluster centroids.</p>
+				
+					<h2>How does k-means cluster works?</h2>
+					<p>Let us see how K-means works step by step. The algorithm can be divided into around 5 to 6 main steps.
+<br><br>
+1.	 Initial step: Choose the desired number of clusters (K) that you want the algorithm to identify within your dataset.
+<br><br>
+2.	Random initialization: Randomly assign K cluster centroids to your dataset. These centroids serve as the starting points for each cluster.
+<br><br>
+3.	Assigning data points: For each data point in your dataset, calculate the distance between that point and each cluster centroid using a distance metric (commonly the Euclidean distance). Place the data point to the cluster with the closest centroid.
+<br><br>
+4.	Updating Cluster centroids: Once all data points have been assigned to clusters, calculate the new centroids for each cluster by taking the mean (average) of all the data points belonging to that cluster.
+<br><br>
+5.	Iterative process: Steps 3 and 4 should be repeated until convergence occurs, which occurs when the cluster assignments no longer change appreciably or when the maximum number of iterations is reached.
+<br><br>
+6.	Result: The final output of the K-means clustering algorithm is a set of K clusters with each data point assigned to one of these clusters.</p>
+
+<img src="images/cluster1.jpg" alt="Cluster Works" class="img-thumbnail">
+
+				</article>
+				<footer>
+					<p class="col-lg-6 col-md-6 col-sm-12 col-xs-12 templatemo-copyright">Copyright &copy; 2024 Nicole Joice Kamatoy <!-- Credit: www.templatemo.com --></p>
+					<p class="col-lg-6 col-md-6 col-sm-12 col-xs-12 templatemo-social">
+					</p>
+				</footer>
+			</div>	
+		</div> <!-- right section -->
+	</div>	
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+	<!-- templatemo 419 black white -->
+    <!-- 
+    Black White
+    http://www.templatemo.com/preview/templatemo_419_black_white
+    -->
+	<title>K-MEANS CLUSTERING</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="css/templatemo_style.css" rel="stylesheet" type="text/css">	
+</head>
+<body>
+	<div class="templatemo-logo visible-xs-block">
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 black-bg logo-left-container">
+			<h1 class="logo-left">TECHNOLOGY</h1>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 white-bg logo-right-container">
+			<h1 class="logo-right">PROJECT MANAGEMENT</h1>
+		</div>			
+	</div>
+	<div class="templatemo-container">
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 black-bg left-container">
+			<h1 class="logo-left hidden-xs margin-bottom-60">TECHNOLOGY</h1>			
+			<div class="tm-left-inner-container">
+				<ul class="nav nav-stacked templatemo-nav">
+				<li><a href="INTRODUCTION.html" </i>INTRODUCTION</a></li>
+ <li><a href="BASIC CONCEPT.html"></i>BASIC CONCEPT</a></li>
+				  <li><a href="ALGORITHM WORKFLOW.html"></i>ALGORITHM WORKFLOW</a></li>
+				  <li><a href="MATHEMATICAL FORMULATION.html"class="active"></i>MATHEMATICAL FORMULATION</a></li>
+				  <li><a href="CHOOSING THE NUMBER OF CLUSTERS (K).html"></i>CHOOSING THE NUMBER OF CLUSTERS (K)</a></li>
+				  <li><a href="STRENGTH AND WEAKNESSES.html"></i>STRENGTH AND WEAKNESSES</a></li>
+  <li><a href="EXAMPLE APPLICATION.html"></i>EXAMPLE APPLICATION</a></li>
+ <li><a href="K-MEANS IN TECHNOLOGY PROJECT MANAGEMENT.html"></i>K-MEANS IN TECHNOLOGY PROJECT MANAGEMENT</a></li>
+ <li><a href="IMPLEMENTATION PROCESS.html"></i>IMPLEMENTATION PROCESS</a></li>
+<li><a href="TOOLS AND TECHNOLOGY.html"</i>TOOLS AND TECHNOLOGY</a></li>
+ <li><a href="COMPARISON WITH OTHER CLUSTERING.html"></i>COMPARISON WITH OTHER CLUSTERING</a></li>
+ <li><a href="CONCLUSION.html"></i>CONCLUSION</a></li>
+ <li><a href="REFERENCES.html"></i>REFERENCES</a></li>
+
+
+			</div>
+		</div> <!-- left section -->
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 white-bg right-container">
+			<h1 class="logo-right hidden-xs margin-bottom-60">PROJECT MANAGEMENT</h1>		
+			<div class="tm-right-inner-container">
+				<h1 class="templatemo-header">K-MEANS CLUSTERING<br>MATHEMATICAL FORMULATION</h1>
+<article><h2>Objective function</h2>
+
+					<p>The primary goal of the K-Means algorithm is to minimize the within-cluster variance, which is the sum of squared distances between each data point and its assigned cluster's centroid. This objective function is expressed as:
+<br><br>
+<img src="images/formula2.jpg" alt="formula2" class="img-thumbnail">
+
+<br><br>Dᵢ: This represents the maximum distance for a specific data point i. In other words, it's the distance between data point i and the farthest centroid among all K centroids.
+<br><br>max(j:1->k): This indicates that we are finding the maximum value across all possible values of j, where j ranges from 1 to k (the number of clusters). In essence, we are comparing the distances between data point i and each of the K centroids and selecting the largest distance.
+<br><br>||Xᵢ - Cⱼ||²: This is the squared Euclidean distance between data point Xᵢ and centroid Cⱼ. The Euclidean distance is a common metric for measuring the distance between two points in a multi-dimensional space. 
+
+					</p>		
+					<h2>Convergence Criteria</h2>
+					<p>The K-Means algorithm iteratively refines the cluster assignments and centroids until it reaches a state of convergence. Convergence is achieved when one of the following criteria is met:
+                    <br><br>1.	Centroid Stability
+The algorithm terminates when the centroids do not change significantly between consecutive changes. This can be quantified by setting a threshold for the change in centroids. If the change is less than the threshold, the algorithm stops.
+
+<br><br>2.	Maximum Iterations
+A predefined maximum number of iterations is reached. This prevents the algorithm from running indefinitely and ensures termination even if the centroids haven't fully stabilized. This is useful to prevent excessive computation time in cases where convergence is slow.
+
+<br><br>3.	Change in Objective Function
+The algorithm can also stop when the improvement in the objective function falls below a certain threshold. This suggests that the algorithm is no longer making substantial progress in minimizing the objective function, indicating that the clusters are optimally partitioned.
+</p>
+				</article>
+				<footer>
+					<p class="col-lg-6 col-md-6 col-sm-12 col-xs-12 templatemo-copyright">Copyright &copy; 2024 Nicole Joice Kamatoy <!-- Credit: www.templatemo.com --></p>
+					<p class="col-lg-6 col-md-6 col-sm-12 col-xs-12 templatemo-social">
+					</p>
+				</footer>
+			</div>	
+		</div> <!-- right section -->
+	</div>	
+</body>
+</html>
